@@ -11,6 +11,40 @@
 
 
  get_header(); ?>
+   <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="title-section text-center col-12">
+            <h2 class="text-uppercase">slide collection</h2>
+          </div>
+        </div>
+         
+        <div class="row">
+          <div class="col-md-12 block-3 products-wrap">
+            <div class="nonloop-block-3 owl-carousel owl-loaded owl-drag">
+                 <?php 
+                          query_posts(array( 
+                              'post_type' => 'camera_product',
+                              'showposts' => 6
+                          ) );  
+                      ?>
+             <?php while ( have_posts() ) : the_post(); ?>
+              <div class="product">
+                <a href="#" class="item">
+                  <img src="<?php echo get_field('camera_img'); ?>" alt="Image" class="img-fluid">
+                  <div class="item-info">
+                    <h3><?php echo get_field('camera_name');?></h3>
+                    <span class="collection d-block">Millorless camera</span>
+                    <strong class="price"><?php echo get_the_title(''); ?></strong>
+                  </div>
+                </a>
+              </div>
+            <?php endwhile; ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <div class="bg-light py-3">
       <div class="container">

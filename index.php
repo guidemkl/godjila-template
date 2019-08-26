@@ -28,11 +28,11 @@
     <div class="products-wrap border-top-0" >
       <div class="container-fluid">
         <div class="row no-gutters products">
-         <?php  query_posts(array( 'post_type' => 'camera_product', 'showposts' => 3 ) );   ?>
+         <?php  query_posts(array( 'post_type' => 'smartphoneproduct', 'showposts' => 3 ) );   ?>
           <?php while (have_posts()) : the_post(); ?> <div class="col-6 col-md-6 col-lg-4">
            <a href="<?php the_permalink(); ?>" class="item"> <img src="<?php echo
-    get_field('camera_img'); ?>" alt="Image" class="img-fluid"> <div
-    class="item-info"> <h3><?php echo get_field('camera_name'); ?></h3> <span
+    get_field('tel_img'); ?>" alt="Image" class="img-fluid"> <div
+    class="item-info"> <h3><?php echo get_field('phone_name'); ?></h3> <span
     class="collection d-block"><?php the_title(); ?></span> <strong
     class="price">$9.50</strong> </div> </a> </div> <?php endwhile; ?> </div>
     </div> </div>
@@ -68,7 +68,7 @@
                  <?php 
                           query_posts(array( 
                               'post_type' => 'camera_product',
-                              'showposts' => 10
+                              'showposts' => 6
                           ) );  
                       ?>
              <?php while ( have_posts() ) : the_post(); ?>

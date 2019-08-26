@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/style.css" type="text/css" />
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/css/magnific-popup.css">
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/css/jquery-ui.css">
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/css/owl.carousel.css">
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/css/owl.theme.default.min.css"> 
-    <link rel="stylesheet" href="http://192.168.107.66:81/wp-content/themes/godjila/css/owl.theme.default.css"> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/aos.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery-ui.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.theme.default.min.css"> 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.theme.default.css"> 
+    <link rel="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
+
+  
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.3.1.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/popper.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/owl2.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
     <?php wp_head(); ?>
   </head>
   <body>
@@ -49,29 +49,29 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="http://192.168.107.66:81" class="js-logo-clone">Dealers</a>
+              <a href="<?php echo the_permalink(); ?>" class="js-logo-clone">Dealers</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="has-children active">
-                  <a href="http://192.168.107.66:81">Collection</a>
+                  <a href="<?php echo the_permalink(); ?>">Collection</a>
                   <ul class="dropdown">
-                    <li><a href="http://192.168.107.66:81">COLLECTION</a></li>
-                    <li><a href="http://192.168.107.66:81/wp-content/themes/godjila/camera">CAMERA</a></li>
-                    <li><a href="http://192.168.107.66:81/wp-content/themes/godjila/smartphone">SMARTPHONE</a></li>
+                    <li><a href="<?php echo get_site_url(); ?>/camera">COLLECTION</a></li>
+                    <li><a href="<?php echo get_site_url(); ?>/camera">CAMERA</a></li>
+                    <li><a href="<?php echo get_site_url(); ?>/smartphone">SMARTPHONE</a></li>
                     <li class="has-children">
                       <a href="#">GADGET & ACCESSORIES</a>
                       <ul class="dropdown">
-                        <li><a href="http://192.168.107.66:81/wp-content/themes/godjila/cable">USB CABLE</a></li>
-                        <li><a href="http://192.168.107.66:81/wp-content/themes/godjila/case">CASE</a></li>
-                        <li><a href="http://192.168.107.66:81/wp-content/themes/godjila/gadget">EARPHONE</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/cable">USB CABLE</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/case">CASE</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/gadget">EARPHONE</a></li>
                       </ul>
                     </li>
                   </ul>
                 </li>
-                
+
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="">Catalogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
