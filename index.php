@@ -53,85 +53,36 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="site-section">
       <div class="container">
         <div class="row">
           <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">สไลด์อยู่ตรงนี้จ้า</h2>
+            <h2 class="text-uppercase">slide collection</h2>
           </div>
         </div>
+         
         <div class="row">
           <div class="col-md-12 block-3 products-wrap">
-            <div class="nonloop-block-3 owl-carousel">
-              
+            <div class="nonloop-block-3 owl-carousel owl-loaded owl-drag">
+                 <?php 
+                          query_posts(array( 
+                              'post_type' => 'camera_product',
+                              'showposts' => 10
+                          ) );  
+                      ?>
+             <?php while ( have_posts() ) : the_post(); ?>
               <div class="product">
                 <a href="#" class="item">
-                  <img src="https://placeimg.com/730/649/animals" alt="Image" class="img-fluid">
+                  <img src="<?php echo get_field('camera_img'); ?>" alt="Image" class="img-fluid">
                   <div class="item-info">
-                    <h3>The Shoe</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50</strong>
+                    <h3><?php echo get_field('camera_name');?></h3>
+                    <span class="collection d-block">Millorless camera</span>
+                    <strong class="price"><?php echo get_the_title(''); ?></strong>
                   </div>
                 </a>
               </div>
-
-              <div class="product">
-                <a href="#" class="item">
-                  <span class="tag">Sale</span>
-                  <img src="https://placeimg.com/730/649/animals" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>Marc Jacobs Bag</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50 <del>$30.00</del></strong>
-                  </div>
-                </a>
-              </div>
-
-              <div class="product">
-                <a href="#" class="item">
-                  <img src="https://placeimg.com/730/649/animals" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>The  Belt</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50</strong>
-                  </div>
-                </a>
-              </div>
-
-              <div class="product">
-                <a href="#" class="item">
-                  <img src="https://placeimg.com/730/649/animals" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>The Shoe</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50</strong>
-                  </div>
-                </a>
-              </div>
-
-              <div class="product">
-                <a href="#" class="item">
-                  <span class="tag">Sale</span>
-                  <img src="https://placeimg.com/730/649/animals" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>Marc Jacobs Bag</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50 <del>$30.00</del></strong>
-                  </div>
-                </a>
-              </div>
-
-              <div class="product">
-                <a href="#" class="item">
-                  <img src="https://placeimg.com/730/649/animals" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>The  Belt</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50</strong>
-                  </div>
-                </a>
-              </div>
+            <?php endwhile; ?>
             </div>
           </div>
         </div>
