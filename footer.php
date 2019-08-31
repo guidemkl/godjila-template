@@ -1,4 +1,19 @@
    <footer class="site-footer custom-border-top">
+   <div id='fb-root'></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <div class='fb-customerchat'
+    attribution="wordpress"
+    page_id='700545390046603'
+    theme_color='#44bec7'
+    logged_in_greeting='สวัสดีครับสนใจสินค้าตัวไหนสอบถามได้เลยนะครับ'
+    logged_out_greeting='สวัสดีครับสนใจสินค้าตัวไหนสอบถามได้เลยนะครับ'
+  >
+</div>
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -24,9 +39,9 @@
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
                   <li><a href="#">Sell online</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Shopping cart</a></li>
-                  <li><a href="#">Store builder</a></li>
+                  <li><a href="#">product</a></li>
+                  <li><a href="#">clothes</a></li>
+                  <li><a href="#">herb</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-4">
@@ -58,7 +73,7 @@
         </div>
       </div>
     </footer>
-  </<div></div>>
+  </<div>
   <?php wp_footer(); ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.3.1.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
@@ -69,15 +84,12 @@
   <script>
 var slideIndex = 1;
 showSlides(slideIndex);
-
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
